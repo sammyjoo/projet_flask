@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data["titre_seo"] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/equipe">Equipe</a></li>
+    </ul>
+
+
+    {% block body %}
+    {% endblock %}
+
+    
+    <h2>Newsletter</h2>
+    <form action="#">
+        <input type="email">
+        <button>Envoyer</button>
+    </form>
+
+    <footer>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, veniam?</p>
+    </footer>
+</body>
+</html>
