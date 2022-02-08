@@ -4,5 +4,15 @@
 
     <h1>{{ data["nom_equipe"] }}</h1>
     <p>{{ data["ontro_equipe"] }}</p>
+    <p>La société est : {{ data["nom_de_la_societe"] }}</p>
+
+    <h2>La liste de mon equipe de choc :</h2>
+    <ul>
+        {% for personne in data["developpeurs"]%}
+            <li>{{ personne | upper }}</li>
+        {% endfor %}
+        
+
+    </ul>
 
 {% endblock %}

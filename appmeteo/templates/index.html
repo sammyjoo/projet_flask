@@ -2,6 +2,12 @@
 {% block body %}
 
     <h1>{{ data["nom_projet"] }}</h1>
+    {% if data["heure_actuelle"] > 17 %}
+        <p>Bonsoir, il est {{ data["heure_actuelle"] }}H du soir</p>
+    {% else %}
+        <p>Bonjour, il est {{ data["heure_actuelle"] }} heures</p>
+    {% endif %}
+
     <p>{{ data["introduction"] }}</p>
 
 {% endblock %}
