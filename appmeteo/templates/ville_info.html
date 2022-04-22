@@ -1,0 +1,9 @@
+{% extends 'annexes/layout.html' %}
+{% block body %}
+
+<h1>BIENVENUE</h1>
+<h2>Les infos de la ville de {{ data["nom_ville"] }} </h2>
+<p>{{ data["wiki_paragraphe"] }}</p>
+<img src="{{ data['wiki_image'] }}">
+
+{% endblock %}

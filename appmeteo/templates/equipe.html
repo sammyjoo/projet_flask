@@ -6,13 +6,37 @@
     <p>{{ data["ontro_equipe"] }}</p>
     <p>La société est : {{ data["nom_de_la_societe"] }}</p>
 
+    <h2>Ajouter de nouvelles personnes</h2>
+    <form action="/equipe/" method="POST">
+        Votre nom :
+        <input type="text" name="nom">
+
+        <br>
+        Votre prénom : 
+        <input type="text" name="prenom">
+
+        <br>
+        Votre email :
+        <input type="text" name="email">
+
+        <br>
+        <input type="submit">
+    </form>
+
     <h2>La liste de mon equipe de choc :</h2>
+
+    {% if data["developpeurs"].count() > 0 %}
     <ul>
         {% for personne in data["developpeurs"]%}
-            <li>{{ personne | upper }}</li>
+            <li>{{ personne.prenom | capitalize }}
+                {{ personne.nom | capitalize }}
+                {{ personne.email | capitalize }}</li>
         {% endfor %}
         
 
     </ul>
+    {% else %}
+    <p>Pas de membre !</p>
+    {% endif%}
 
 {% endblock %}

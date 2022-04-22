@@ -2,6 +2,18 @@
 {% block body %}
 
     <h1>{{ data["nom_projet"] }}</h1>
+
+    <form action="/meteo/" method="GET">
+        <select name="ville">
+            <option value="paris">Paris</option>
+            <option value="seoul">Séoul</option>
+            <option value="londres">London</option>
+        </select>
+        <input type="submit" name="voir la météo">
+    </form> 
+    
+    
+
     {% if data["heure_actuelle"] > 17 %}
         <p>Bonsoir, il est {{ data["heure_actuelle"] }}H du soir</p>
     {% else %}

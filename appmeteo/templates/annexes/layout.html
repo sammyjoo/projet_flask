@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <header>
     <ul>
         <li><a href="/">Accueil</a></li>
         <li><a href="/equipe">Equipe</a></li>
     </ul>
-
+    </header>
 
     {% block body %}
     {% endblock %}
 
-    
-    <h2>Newsletter</h2>
+    <div class="newsletter">
+    <h3>Newsletter</h3>
     <form action="#">
         <input type="email">
         <button>Envoyer</button>
     </form>
+    </div>
 
     <footer>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, veniam?</p>

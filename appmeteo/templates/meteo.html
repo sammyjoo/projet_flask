@@ -1,0 +1,14 @@
+{% extends 'annexes/layout.html' %}
+{% block body %}
+
+<h1>La météo de {{ data["nom_ville"] }} </h1>
+<h2>{{ data["temperature"] }}</h2>
+<p>{{ data["vent"] }}</p>
+<p>{{ data["humidite"] }}</p>
+<p>
+    <a href="/ville/{{data['nom_ville'] }}">En savoir plus sur {{data["nom_ville"] }}</a>
+     
+</p>
+
+
+{% endblock %}
